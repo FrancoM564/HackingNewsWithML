@@ -11,6 +11,13 @@
 		E473C8F829DCCFE10092EF54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E473C8F729DCCFE10092EF54 /* ContentView.swift */; };
 		E473C8FA29DCCFE30092EF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E473C8F929DCCFE30092EF54 /* Assets.xcassets */; };
 		E473C8FD29DCCFE30092EF54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E473C8FC29DCCFE30092EF54 /* Preview Assets.xcassets */; };
+		E473C90429DCD02A0092EF54 /* HNStoriesFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E473C90329DCD02A0092EF54 /* HNStoriesFeed.swift */; };
+		E473C90629DCD15B0092EF54 /* FetchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E473C90529DCD15B0092EF54 /* FetchItem.swift */; };
+		E473C90829DCD7EA0092EF54 /* StructItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E473C90729DCD7EA0092EF54 /* StructItem.swift */; };
+		E473C90B29DCD9A10092EF54 /* LazyViewSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E473C90A29DCD9A10092EF54 /* LazyViewSwiftUI */; };
+		E473C90D29DCDA650092EF54 /* HNCommentFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E473C90C29DCDA650092EF54 /* HNCommentFeed.swift */; };
+		E473C90F29DCDA9D0092EF54 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E473C90E29DCDA9D0092EF54 /* CommentView.swift */; };
+		E473C91129DCDB860092EF54 /* CommentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E473C91029DCDB860092EF54 /* CommentItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,12 @@
 		E473C8F729DCCFE10092EF54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E473C8F929DCCFE30092EF54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E473C8FC29DCCFE30092EF54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E473C90329DCD02A0092EF54 /* HNStoriesFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNStoriesFeed.swift; sourceTree = "<group>"; };
+		E473C90529DCD15B0092EF54 /* FetchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchItem.swift; sourceTree = "<group>"; };
+		E473C90729DCD7EA0092EF54 /* StructItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructItem.swift; sourceTree = "<group>"; };
+		E473C90C29DCDA650092EF54 /* HNCommentFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNCommentFeed.swift; sourceTree = "<group>"; };
+		E473C90E29DCDA9D0092EF54 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		E473C91029DCDB860092EF54 /* CommentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E473C90B29DCD9A10092EF54 /* LazyViewSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +49,7 @@
 		E473C8E929DCCFE10092EF54 = {
 			isa = PBXGroup;
 			children = (
+				E473C90E29DCDA9D0092EF54 /* CommentView.swift */,
 				E473C8F429DCCFE10092EF54 /* hackerNewsRecognition */,
 				E473C8F329DCCFE10092EF54 /* Products */,
 			);
@@ -53,7 +68,12 @@
 			children = (
 				E473C8F529DCCFE10092EF54 /* hackerNewsRecognitionApp.swift */,
 				E473C8F729DCCFE10092EF54 /* ContentView.swift */,
+				E473C90C29DCDA650092EF54 /* HNCommentFeed.swift */,
+				E473C90329DCD02A0092EF54 /* HNStoriesFeed.swift */,
 				E473C8F929DCCFE30092EF54 /* Assets.xcassets */,
+				E473C90529DCD15B0092EF54 /* FetchItem.swift */,
+				E473C90729DCD7EA0092EF54 /* StructItem.swift */,
+				E473C91029DCDB860092EF54 /* CommentItem.swift */,
 				E473C8FB29DCCFE30092EF54 /* Preview Content */,
 			);
 			path = hackerNewsRecognition;
@@ -83,6 +103,9 @@
 			dependencies = (
 			);
 			name = hackerNewsRecognition;
+			packageProductDependencies = (
+				E473C90A29DCD9A10092EF54 /* LazyViewSwiftUI */,
+			);
 			productName = hackerNewsRecognition;
 			productReference = E473C8F229DCCFE10092EF54 /* hackerNewsRecognition.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +134,9 @@
 				Base,
 			);
 			mainGroup = E473C8E929DCCFE10092EF54;
+			packageReferences = (
+				E473C90929DCD9A10092EF54 /* XCRemoteSwiftPackageReference "Lazy-View-SwiftUI" */,
+			);
 			productRefGroup = E473C8F329DCCFE10092EF54 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +163,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E473C90829DCD7EA0092EF54 /* StructItem.swift in Sources */,
 				E473C8F829DCCFE10092EF54 /* ContentView.swift in Sources */,
 				E473C8F629DCCFE10092EF54 /* hackerNewsRecognitionApp.swift in Sources */,
+				E473C90D29DCDA650092EF54 /* HNCommentFeed.swift in Sources */,
+				E473C90429DCD02A0092EF54 /* HNStoriesFeed.swift in Sources */,
+				E473C90F29DCDA9D0092EF54 /* CommentView.swift in Sources */,
+				E473C91129DCDB860092EF54 /* CommentItem.swift in Sources */,
+				E473C90629DCD15B0092EF54 /* FetchItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E473C90929DCD9A10092EF54 /* XCRemoteSwiftPackageReference "Lazy-View-SwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joehinkle11/Lazy-View-SwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E473C90A29DCD9A10092EF54 /* LazyViewSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E473C90929DCD9A10092EF54 /* XCRemoteSwiftPackageReference "Lazy-View-SwiftUI" */;
+			productName = LazyViewSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E473C8EA29DCCFE10092EF54 /* Project object */;
 }

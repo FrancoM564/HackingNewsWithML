@@ -8,14 +8,53 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var hnFeed = HNStoriesFeed()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        NavigationStack{
+            
+            List(hnFeed.storyItems){ articleItem in
+                
+                NavigationLink(destination:
+                                LazyView(CommentView(commentIds: articleItem.kids ?? [])))
+                {
+                    
+                    StoryListItemView(article: articleItem)
+                    
+                }
+                
+            }
+            .navigationBarTitle("Hacker News Stories")
+            
         }
-        .padding()
+    }
+}
+
+struct LazyView<Content: View>:View{
+    let build: () -> Content
+    
+    init(_ build: @autoclosure @escaping () -> Content) {
+        self.build = build
+    }
+    
+    var body: Content{
+        build()
+    }
+}
+
+struct StoryListItemView: View {
+    var article: StoryItem
+    
+    var body: some View {
+        
+        VStack(alignment: .leading) {
+            Text("\(article.title ?? "")")
+                .font(.headline)
+            Text("Author: \(article.by)")
+                .font(.subheadline)
+        }
     }
 }
 
